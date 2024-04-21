@@ -1,9 +1,9 @@
 const express = require("express");
 require("dotenv").config();
-const uploadRoute = require("./controller/routeUpload");
+const uploadRoute = require("./controllers/routerUpload");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 //the route
