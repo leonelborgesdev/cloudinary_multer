@@ -5,7 +5,7 @@ const upload = require("../middleware/multer");
 
 router.post("/upload", upload.single("image"), function (req, res) {
   cloudinary.uploader.upload(req.file.path, function (err, result) {
-    console.log("req", req);
+    console.log("req", req.body);
     if (err) {
       console.log(err);
       return res.status(500).json({
