@@ -1,13 +1,13 @@
 const express = require("express");
 require("dotenv").config();
-const uploadRoute = require("./controllers/routerUpload");
+const routes = require("./routes/index.routes.js");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 //the route
-app.use("/api/users", uploadRoute);
+app.use(routes);
 
 //posrt connection
 app.listen(PORT, () => {
